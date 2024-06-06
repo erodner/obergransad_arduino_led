@@ -1,6 +1,7 @@
 // THIS FILE IS A DEMO FOR IKEA OBERGRANSÄD KIT
 // AS INTERNET CLOCK
 
+// Added WiFi improvements, etc.
 // (C)2023 DR. ARMIN ZINK
 // parts inspired by
 // By /u/frumperino
@@ -8,7 +9,7 @@
 
 #include <Arduino.h>
 #include <pgmspace.h>
-#include <ESP8266WiFi.h>
+#include <ESP8266WiFi.h>a
 #include "secrets.h"
 #include "wifi_helper.h"
 
@@ -22,7 +23,7 @@ WifiHelper wh; // use wh(123) to set EEPROM offset
 #define P_KEY D4 // ROT
 
 // SET YOUR TIMEZONE HERE
-#define MY_NTP_SERVER "130.149.7.7"            // set the best fitting NTP server (pool) for your location
+#define MY_NTP_SERVER "130.149.7.7"            // set the best fitting NTP server (pool) for your location, currently IP of TU-Berlin server
 #define MY_TZ "CET-1CEST,M3.5.0/02,M10.5.0/03" // https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv
 
 long mil;
